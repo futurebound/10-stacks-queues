@@ -20,6 +20,7 @@ describe('Stack Data Structure Module', function () {
       expect(this.stack.maxSize).toEqual(1048);
     });
   });
+
   describe('#push', () => {
     it('should have a size of 20', () => {
       [...Array(20)].map((e, i) => this.stack.push(~~(Math.random() * i)));
@@ -35,14 +36,23 @@ describe('Stack Data Structure Module', function () {
       }).toThrow();
     });
   });
+
   describe('#pop', () => {
-    it('should remove the top most node from the stack', () => {
+    it('should have a size of 19', () => {
+      [...Array(20)].map((e, i) => this.stack.push(~~(Math.random() * i)))
+      this.stack.pop();
+      expect(this.stack.size).toEqual(19);
+    });
+    it('should remove the top most node from the stack, with a value of 1', () => {
       this.stack.push(1);
       expect(this.stack.top.val).toEqual(1);
       expect(this.stack.pop().val).toEqual(1);
-
+    });
+    it('should throw an error if trying to pop with empty stack', () => {
+      expect(this.stack.pop()).toThrow();
     });
   });
+
   describe('#peek', () => {
     it('should return the top of the stack', () => {
       expect(this.stack.top).toBeNull();
