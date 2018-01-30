@@ -49,7 +49,9 @@ describe('Stack Data Structure Module', function () {
       expect(this.stack.pop().val).toEqual(1);
     });
     it('should throw an error if trying to pop with empty stack', () => {
-      expect(this.stack.pop()).toThrow();
+      expect(() => {
+        this.stack.pop();
+      }).toThrow();
     });
   });
 
@@ -58,6 +60,16 @@ describe('Stack Data Structure Module', function () {
       expect(this.stack.top).toBeNull();
       this.stack.push(1);
       expect(this.stack.peek().val).toEqual(1);
+    });
+    it('should return a stack with 3 nodes', () => {
+      expect(this.stack.top).toBeNull();
+      this.stack.push(1);
+      this.stack.push(1);
+      this.stack.push(1);
+      expect(this.stack.peek().next.next.next).toBeNull();
+    });
+    it('should return null when peeking at empty stack', () => {
+      expect(this.stack.peek()).toBeNull();
     });
   });
 });

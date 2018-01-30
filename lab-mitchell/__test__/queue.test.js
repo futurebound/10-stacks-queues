@@ -24,20 +24,31 @@ describe('#queue', function(){
     });
   });
 
-  describe('enqueue method', () => {
+  describe('#enqueue', () => {
     it('should add a node with value of 1 to front of queue', () => {
       this.queue.enqueue(1);
       expect(this.queue.front.val).toEqual(1);
     });
     it('should add a node with value of 2 to back of queue', () => {
-      this.queue.enqueue(1);
-      this.queue.enqueue(2);
-      expect(this.queue.back.val).toEqual(2);
-      expect(this.queue.back.next.val).toEqual(1);
+      this.queue.enqueue(1).enqueue(2);
+      expect(this.queue.front.next).toEqual({val: 2, next: null});
+    });
+    it('should throw error when max size of queue is met', () => {
+      expect(() => {
+        [...Array(1049)].map((e, i) => this.queue.enqueue(~~(Math.random() * i)));
+      }).toThrow();
     });
   });
 
-  describe('dequeue method', () => {
+  describe('#dequeue', () => {
+    it('should remove the ', () => {
 
+    });
+    it('should remove the ', () => {
+
+    });
+    it('should throw an error if nothing in queue', () => {
+
+    });
   });
 });
