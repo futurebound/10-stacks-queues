@@ -41,14 +41,21 @@ describe('#queue', function(){
   });
 
   describe('#dequeue', () => {
-    it('should remove the ', () => {
-
+    it('should return what is being dequeued when only one item in queue', () => {
+      this.queue.enqueue(1);
+      expect(this.queue.dequeue()).toEqual({val: 1, next: null});
     });
-    it('should remove the ', () => {
-
+    it('should properly decrement the size of the queue', () => {
+      this.queue.enqueue(1);
+      this.queue.enqueue(2);
+      this.queue.enqueue(3);
+      this.queue.dequeue();
+      expect(this.queue.size).toEqual(2);
     });
     it('should throw an error if nothing in queue', () => {
-
+      expect(() => {
+        this.queue.dequeue();
+      }).toThrow();
     });
   });
 });
