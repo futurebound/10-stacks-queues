@@ -1,50 +1,18 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 15 - Stacks and Queues Data Structures
-====
+# Whiteboarding Challenge 12
 
-## To Submit this Assignment
-  * fork this repository
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
-  * push to your repository
-  * submit a pull request to this repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
+**Author**: Mitchell
+**Version**: 1.0.0
 
-## Requirements
-#### Configuration
-<!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include
-  * **README.md** -- with a documentation about your lab
-  * **.gitignore** -- with a robust .gitignore
-  * **.eslintrc.json** -- with the class .eslintrc file
-  * **.eslintignore** -- with the class .eslintignore
-  * **.package.json** -- with all dependencies and dev-dependencies
-  * **lib/** -- directory for holding your programs helper modules
-  * **test/** -- directory for holding your programs unit and integration tests
+## Overview
+This challenge was to imitate a Queue data structure through the use of two Stacks. The `enqueue(val)` and `dequeue()` methods of the Queue class should function normally, where `enqueue(val)` adds a new node instance with the passed value to the back of the Queue, and `dequeue()` removes and returns the node instance at the front of the Queue.
 
-#### Testing
-  * Write at least three test assertions for each method of the Stack and Queue Data Structures
-  * Organize your tests into appropriate describe/it blocks for test output readability
+## Getting Started
+To get this application up and running, fork and/or clone this repository using the `git clone <git repository link>` command in your terminal. Next, run the `npm install` command, which will install all the necessary dependencies in the accompanying package.json file. After those packages have installed, you can run `npm test` to explore the included tests and functionality of their respective solutions. You can open up the code in your favorite editor to explore/modify the code, see how the tests are structured, and create tests of your own if desired.
 
-#### Documentation
-  * In your README, write documentation for you data structures
-  * Your documentation should includes code block usage examples
-  * Provide instructions for:
-    * Installing and using your data structure
-    * Accessing each method
-    * Running your tests
+## Description
 
-#### Feature Tasks
-  * Implement a Stack constructor
-  * Implement `push(value)`, `pop()`, and `peek()` methods on the Stack prototype
-  * Implement a Queue constructor
-  * Implement `enqueue(value)` and `dequeue()` methods on the Queue prototype
 
-## Stretch:
-  * Implement Reverse Polish Notation using your Stack data structure
-    * Refer to the [Wiki](https://en.wikipedia.org/wiki/Reverse_Polish_notation) for more information on RPN
 
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
+## Credits and Collaborations
+[Jest Docs](https://facebook.github.io/jest/) ~ https://facebook.github.io/jest/
+
