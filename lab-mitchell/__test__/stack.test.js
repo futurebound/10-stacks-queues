@@ -39,7 +39,7 @@ describe('Stack Data Structure Module', function () {
 
   describe('#pop', () => {
     it('should have a size of 19', () => {
-      [...Array(20)].map((e, i) => this.stack.push(~~(Math.random() * i)))
+      [...Array(20)].map((e, i) => this.stack.push(~~(Math.random() * i)));
       this.stack.pop();
       expect(this.stack.size).toEqual(19);
     });
